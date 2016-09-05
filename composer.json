@@ -1,0 +1,13 @@
+{
+    "name": "lucid-arch/laravel-foundation",
+    "description": "The Foundation of the Lucid Architecture project for Laravel",
+    "type": "metapackage",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abed Halawi",
+            "email": "abed.halawi@vinelab.com"
+        }
+    ],
+    "require": {}
+}
