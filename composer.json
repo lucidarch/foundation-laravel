@@ -1,7 +1,7 @@
 {
     "name": "lucid-arch/laravel-foundation",
     "description": "The Foundation of the Lucid Architecture project for Laravel",
-    "type": "metapackage",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
