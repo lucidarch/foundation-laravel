@@ -6,10 +6,9 @@ use ReflectionClass;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use App\Domains\Queue\DefaultQueue;
-use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
-abstract class Feature implements SelfHandling
+abstract class Feature
 {
     use MarshalTrait;
     use DispatchesJobs;

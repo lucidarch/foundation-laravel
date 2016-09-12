@@ -2,8 +2,6 @@
 
 namespace Lucid\Foundation;
 
-use Illuminate\Contracts\Bus\SelfHandling;
-
 /**
  * An abstract Job to be extended by every job.
  * Note that this job is self-handling which
@@ -11,6 +9,6 @@ use Illuminate\Contracts\Bus\SelfHandling;
  * will have the "handle()" method
  * called instead.
  */
-abstract class Job implements SelfHandling
+abstract class Job
 {
 }
