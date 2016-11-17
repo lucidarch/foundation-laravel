@@ -49,12 +49,8 @@ abstract class Feature
      *
      * @return mixed
      */
-    public function runInQueue($job, $arguments, Queue $queue = null)
+    public function runInQueue($job, array $arguments = [], $queue = 'default')
     {
-        if (!$queue) {
-            $queue = DefaultQueue::class;
-        }
-
         // instantiate and queue the job
         $reflection = new ReflectionClass($job);
         $jobInstance = $reflection->newInstanceArgs($arguments);
