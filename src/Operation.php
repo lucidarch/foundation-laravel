@@ -4,7 +4,7 @@ namespace Lucid\Foundation;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
-abstract class Feature
+abstract class Operation
 {
     use MarshalTrait;
     use DispatchesJobs;
