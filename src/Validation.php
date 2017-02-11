@@ -29,6 +29,6 @@ class Validation
      */
     public function getValidationFactory()
     {
-        return app('Illuminate\Contracts\Validation\Factory');
+        return app(Illuminate\Contracts\Validation\Factory::class);
     }
 }

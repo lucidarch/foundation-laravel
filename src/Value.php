@@ -34,7 +34,7 @@ class Value
      */
     public function validation(array $input, array $rules, array $messages = [], array $customAttributes = [])
     {
-        return app('Lucid\Foundation\Validation')->make($input, $rules, $messages, $customAttributes);
+        return app(Lucid\Foundation\Validation::class)->make($input, $rules, $messages, $customAttributes);
     }
 
     /**
