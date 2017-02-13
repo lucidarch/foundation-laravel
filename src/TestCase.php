@@ -2,7 +2,7 @@
 
 namespace Lucid\Foundation;
 
-use TestCase as BaseTestCase;
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
 class TestCase extends BaseTestCase
 {
