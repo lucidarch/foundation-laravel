@@ -13,8 +13,8 @@ trait ServesFeaturesTrait
     /**
      * Serve the given feature with the given arguments.
      *
-     * @param \Lucid\Foundation\AbstractFeature $feature
-     * @param array                           $arguments
+     * @param string $feature
+     * @param array  $arguments
      *
      * @return mixed
      */
