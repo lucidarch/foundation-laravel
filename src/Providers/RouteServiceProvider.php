@@ -38,15 +38,16 @@ abstract class RouteServiceProvider extends BaseServiceProvider
      * @param $router
      * @param $namespace
      * @param $path
+     * @param $prefix
      *
      * @return void
      */
-    protected function mapApiRoutes($router, $namespace, $path)
+    protected function mapApiRoutes($router, $namespace, $path, $prefix='api')
     {
         $router->group([
             'middleware' => 'api',
             'namespace'  => $namespace,
-            'prefix'     => 'api'
+            'prefix'     => $prefix // to allow the delete or change of api prefix
         ], function ($router) use ($path) {
             require $path;
         });
