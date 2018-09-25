@@ -30,7 +30,7 @@ class Validator
      *
      * @throws \Lucid\Foundation\InvalidInputException
      */
-    public function validate($input, array $rules = [], array $messages = [])
+    public function validate(array $input, array $rules = [], array $messages = [])
     {
         $validation = $this->validation($input, $rules, $messages);
 
@@ -51,7 +51,7 @@ class Validator
      *
      * @return \Illuminate\Validation\Validator
      */
-    public function validation($input, array $rules = [], array $messages = [])
+    public function validation(array $input, array $rules = [], array $messages = [])
     {
         if (empty($rules)) {
             $rules = $this->rules;
