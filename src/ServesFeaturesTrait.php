@@ -20,6 +20,10 @@ trait ServesFeaturesTrait
      */
     public function serve($feature, $arguments = [])
     {
-        return $this->dispatch($this->marshal($feature, new Collection(), $arguments));
+        if (!is_object($feature)) {
+            return $this->dispatch($this->marshal($feature, new Collection(), $arguments));
+        } else {
+            return $this->dispatch($feature, $arguments);
+        }
     }
 }
