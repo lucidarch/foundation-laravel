@@ -2,6 +2,8 @@
 
 namespace Lucid\Foundation;
 
+use Lucid\Foundation\Events\JobStarted;
+use Lucid\Foundation\Events\OperationStarted;
 use ReflectionClass;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
@@ -30,6 +32,15 @@ trait JobDispatcherTrait
             if (!is_object($job)) {
                 $job = $this->marshal($job, new Collection(), $arguments);
             }
+
+            if ($job instanceof Operation) {
+                event(new OperationStarted(get_class($job)));
+            }
+
+            if ($job instanceof Job) {
+                event(new JobStarted(get_class($job)));
+            }
+
 
             $result = $this->dispatch($job, $arguments);
         }
