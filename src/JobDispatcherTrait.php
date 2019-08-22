@@ -34,11 +34,11 @@ trait JobDispatcherTrait
             }
 
             if ($job instanceof Operation) {
-                event(new OperationStarted(get_class($job)));
+                event(new OperationStarted(get_class($job), $arguments));
             }
 
             if ($job instanceof Job) {
-                event(new JobStarted(get_class($job)));
+                event(new JobStarted(get_class($job), $arguments));
             }
 
             $result = $this->dispatch($job, $arguments);

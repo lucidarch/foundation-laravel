@@ -21,7 +21,7 @@ trait ServesFeaturesTrait
      */
     public function serve($feature, $arguments = [])
     {
-        event(new FeatureStarted($feature));
+        event(new FeatureStarted($feature, $arguments));
 
         return $this->dispatch($this->marshal($feature, new Collection(), $arguments));
     }
